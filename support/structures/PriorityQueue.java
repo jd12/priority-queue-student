@@ -15,68 +15,68 @@ import java.util.Iterator;
  */
 public interface PriorityQueue<P, V> extends Iterable<Entry<P, V>> {
 
-	/**
-	 * Enqueues the specified {@code value} into this {@link PriorityQueue} with
-	 * the specified {@code priority}. This runs in O(log(size)) time. For
-	 * convenience this method returns the modified {@link PriorityQueue}.
-	 * @param priority
-	 *            the priority of this enqueue
-	 * @param value
-	 *            the value being enqueued
-	 * @return the modified {@link PriorityQueue}.
-	 * @throws NullPointerException
-	 *             if {@code prioirty} is {@code null} or {@code value} is
-	 *             {@code null}.
-	 */
-	PriorityQueue<P, V> enqueue(P priority, V value);
+  /**
+   * Enqueues the specified {@code value} into this {@link PriorityQueue} with
+   * the specified {@code priority}. This runs in O(log(size)) time. For
+   * convenience this method returns the modified {@link PriorityQueue}.
+   * @param priority
+   *            the priority of this enqueue
+   * @param value
+   *            the value being enqueued
+   * @return the modified {@link PriorityQueue}.
+   * @throws NullPointerException
+   *             if {@code prioirty} is {@code null} or {@code value} is
+   *             {@code null}.
+   */
+  PriorityQueue<P, V> enqueue(P priority, V value);
 
-	/**
-	 * Removes the value with the lowest priority in this {@link PriorityQueue}
-	 * and then returns it. This runs in O(log(size)) time.
-	 * @return the value with the lowest priority in this {@link PrioirtyQueue}
-	 * @throws IllegalStateException
-	 *             if this {@link PriorityQueue} is empty.
-	 */
-	V dequeue();
+  /**
+   * Removes the value with the lowest priority in this {@link PriorityQueue}
+   * and then returns it. This runs in O(log(size)) time.
+   * @return the value with the lowest priority in this {@link PriorityQueue}
+   * @throws IllegalStateException
+   *             if this {@link PriorityQueue} is empty.
+   */
+  V dequeue();
 
-	/**
-	 * Returns the value with the lowest priority in this {@link PriorityQueue}.
-	 * @return the value with the lowest priority in this {@link PriorityQueue}.
-	 * @throws IllegalStateException
-	 *             if this {@link PriorityQueue} is empty.
-	 */
-	V peek();
+  /**
+   * Returns the value with the lowest priority in this {@link PriorityQueue}.
+   * @return the value with the lowest priority in this {@link PriorityQueue}.
+   * @throws IllegalStateException
+   *             if this {@link PriorityQueue} is empty.
+   */
+  V peek();
 
-	/**
-	 * Returns an {@link Iterator} over all of the entries in this
-	 * {@link PriorityQueue}. The order of these elements is unspecified and a
-	 * call to {@link Iterator#remove()} results in an
-	 * {@link UnsupportedOperationException}.
-	 * @return an {@link Iterator} over all of the values in this
-	 *         {@link PriorityQueue}.
-	 */
-	Iterator<Entry<P, V>> iterator();
+  /**
+   * Returns an {@link Iterator} over all of the entries in this
+   * {@link PriorityQueue}. The order of these elements is unspecified and a
+   * call to {@link Iterator#remove()} results in an
+   * {@link UnsupportedOperationException}.
+   * @return an {@link Iterator} over all of the values in this
+   *         {@link PriorityQueue}.
+   */
+  Iterator<Entry<P, V>> iterator();
 
-	/**
-	 * Returns the {@link Comparator} that is used to determine the ordering of
-	 * {@link Entry}s in this {@link PriorityQueue}.
-	 * @return the {@link Comparator} that is used to determine the ordering of
-	 *         {@link Entry}s in this {@link PriorityQueue}.
-	 */
-	Comparator<P> getComparator();
+  /**
+   * Returns the {@link Comparator} that is used to determine the ordering of
+   * {@link Entry}s in this {@link PriorityQueue}.
+   * @return the {@link Comparator} that is used to determine the ordering of
+   *         {@link Entry}s in this {@link PriorityQueue}.
+   */
+  Comparator<P> getComparator();
 
-	/**
-	 * Returns the total number of elements in this {@link PriorityQueue}.
-	 * @return the total number of elements in this {@link PriorityQueue}
-	 */
-	int size();
+  /**
+   * Returns the total number of elements in this {@link PriorityQueue}.
+   * @return the total number of elements in this {@link PriorityQueue}
+   */
+  int size();
 
-	/**
-	 * Returns {@code true} if this {@link PrioirtyQueue} has no elements and
-	 * {@code false} otherwise.
-	 * @return {@code true} if this {@link PrioirtyQueue} has no elements and
-	 *         {@code false} otherwise.
-	 */
-	boolean isEmpty();
+  /**
+   * Returns {@code true} if this {@link PriorityQueue} has no elements and
+   * {@code false} otherwise.
+   * @return {@code true} if this {@link PriorityQueue} has no elements and
+   *         {@code false} otherwise.
+   */
+  boolean isEmpty();
 
 }

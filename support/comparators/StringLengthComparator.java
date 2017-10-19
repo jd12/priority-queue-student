@@ -8,14 +8,16 @@ import java.util.Comparator;
  * same length are sorted lexicographically.
  * @author jcollard, jddevaug
  */
-public class StringLengthComparator implements Comparator<String>{
+public class StringLengthComparator implements Comparator<String> {
 
-	@Override
-	public int compare(String arg0, String arg1) {
-		if(arg0.length() < arg1.length()) return -1;
-		if(arg0.length() > arg1.length()) return 1;
-		return arg0.compareTo(arg1);
-	}
-
-	
+  @Override
+  public final int compare(final String arg0, final String arg1) {
+    if (arg0.length() < arg1.length()) {
+      return -1;
+    }
+    if (arg0.length() > arg1.length()) {
+      return 1;
+    }
+    return arg0.compareTo(arg1);
+  }
 }
